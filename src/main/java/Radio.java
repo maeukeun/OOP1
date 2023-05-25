@@ -1,52 +1,51 @@
 public class Radio {
     private int currentNumberRadio;
     private int currentVolume;
-    private  int maxStation;
+    private int maxStation;
 
-    public Radio(){
+    public Radio() {
         maxStation = 9;
     }
 
-    public Radio(int numberRadioCount){
+    public Radio(int numberRadioCount) {
         maxStation = numberRadioCount - 1;
     }
 
-    public void nextNumberRadio(){
-        if (currentNumberRadio < maxStation){
-            currentNumberRadio ++;
-        }
-        else
+    public void nextNumberRadio() {
+        if (currentNumberRadio < maxStation) {
+            currentNumberRadio++;
+        } else
             currentNumberRadio = 0;
     }
 
-    public void prevNumberRadio(){
-        if (currentNumberRadio > 0){
-            currentNumberRadio --;
-        }
-        else
+    public void prevNumberRadio() {
+        if (currentNumberRadio > 0) {
+            currentNumberRadio--;
+        } else
             currentNumberRadio = maxStation;
     }
 
     public void increaseVolume() {
         if (currentVolume < 100) {
-            currentVolume ++;
+            currentVolume++;
         }
     }
 
     public void decreaseVolume() {
         if (currentVolume > 0) {
-            currentVolume --;
+            currentVolume--;
         }
     }
+
     public int getCurrentNumberRadio() {
         return currentNumberRadio;
     }
 
     public void setCurrentNumberRadio(int currentNumberRadio) {
-        if (currentNumberRadio < 0){
+        if (currentNumberRadio < 0) {
             return;
         }
-        if (currentNumberRadio > maxStation){
+        if (currentNumberRadio > maxStation) {
             return;
         }
         this.currentNumberRadio = currentNumberRadio;
@@ -57,10 +56,10 @@ public class Radio {
     }
 
     public void setCurrentVolume(int currentVolume) {
-        if (currentVolume < 0){
+        if (currentVolume < 0) {
             return;
         }
-        if (currentVolume > 100){
+        if (currentVolume > 100) {
             return;
         }
         this.currentVolume = currentVolume;

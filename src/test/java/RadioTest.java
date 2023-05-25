@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
     //Без параметров
     @Test
-    public void testNextNumber(){
+    public void testNextNumber() {
         Radio radio = new Radio();
         radio.setCurrentNumberRadio(5);
 
@@ -16,7 +16,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testPrevNumber(){
+    public void testPrevNumber() {
         Radio radio = new Radio();
         radio.setCurrentNumberRadio(8);
 
@@ -26,8 +26,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void testPrevNumberOnBound(){
+    public void testPrevNumberOnBound() {
         Radio radio = new Radio();
         radio.setCurrentNumberRadio(0);
 
@@ -37,8 +38,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void testNextNumberOnBound(){
+    public void testNextNumberOnBound() {
         Radio radio = new Radio();
         radio.setCurrentNumberRadio(9);
 
@@ -48,8 +50,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void testCurrentNumberOutOfBound(){
+    public void testCurrentNumberOutOfBound() {
         Radio radio = new Radio();
         radio.setCurrentNumberRadio(-1);
 
@@ -58,8 +61,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void testCurrentNumberOutOfBound2(){
+    public void testCurrentNumberOutOfBound2() {
         Radio radio = new Radio();
         radio.setCurrentNumberRadio(14);
 
@@ -70,7 +74,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testIncreaseVolume(){
+    public void testIncreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(5);
 
@@ -82,7 +86,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testDecreaseVolume(){
+    public void testDecreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(5);
 
@@ -94,7 +98,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testIncreaseVolumeOnBound(){
+    public void testIncreaseVolumeOnBound() {
         Radio radio = new Radio();
         radio.setCurrentVolume(100);
 
@@ -106,7 +110,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testDecreaseVolumeOnBound(){
+    public void testDecreaseVolumeOnBound() {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
 
@@ -118,7 +122,7 @@ public class RadioTest {
     }
 
     @Test
-    public void testVolumeOutOfBound(){
+    public void testVolumeOutOfBound() {
         Radio radio = new Radio();
         radio.setCurrentVolume(-10);
 
@@ -127,8 +131,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void testVolumeOutOfBound2(){
+    public void testVolumeOutOfBound2() {
         Radio radio = new Radio();
         radio.setCurrentVolume(101);
 
@@ -140,7 +145,7 @@ public class RadioTest {
 
     //С параметрами
     @Test
-    public void paramTestNextNumber(){
+    public void paramTestNextNumber() {
         Radio radio = new Radio(54);
         radio.setCurrentNumberRadio(50);
 
@@ -152,7 +157,7 @@ public class RadioTest {
     }
 
     @Test
-    public void paramTestPrevNumber(){
+    public void paramTestPrevNumber() {
         Radio radio = new Radio(54);
         radio.setCurrentNumberRadio(8);
 
@@ -164,7 +169,7 @@ public class RadioTest {
     }
 
     @Test
-    public void paramTestPrevNumberOnBound(){
+    public void paramTestPrevNumberOnBound() {
         Radio radio = new Radio(54);
         radio.setCurrentNumberRadio(0);
 
@@ -176,7 +181,7 @@ public class RadioTest {
     }
 
     @Test
-    public void paramTestNextNumberOnBound(){
+    public void paramTestNextNumberOnBound() {
         Radio radio = new Radio(54);
         radio.setCurrentNumberRadio(53);
 
@@ -188,7 +193,7 @@ public class RadioTest {
     }
 
     @Test
-    public void paramTestCurrentNumberOutOfBound(){
+    public void paramTestCurrentNumberOutOfBound() {
         Radio radio = new Radio(54);
         radio.setCurrentNumberRadio(-1);
 
@@ -199,7 +204,7 @@ public class RadioTest {
     }
 
     @Test
-    public void paramTestCurrentNumberOutOfBound2(){
+    public void paramTestCurrentNumberOutOfBound2() {
         Radio radio = new Radio(54);
         radio.setCurrentNumberRadio(54);
 
